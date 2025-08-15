@@ -29,3 +29,11 @@ L = Logging("my_program", "/var/logs/")
 ```
 
 ---
+### Example Output:
+```sh
+$ cat /tmp/my_program_1.log
+...
+[ERROR 404 @ 00:00:02]: File not Found
+[ERROR 500 @ 00:00:12]: Databse connection failed
+...
+```
