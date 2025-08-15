@@ -27,3 +27,5 @@ Optionally you can pass a specific location, instead of using the default `/tmp/
 ```sh
 L = Logging("my_program", "/var/logs/")
 ```
+
+---
