@@ -9,7 +9,8 @@ A fairly simple Python Error Logging module that will:
 - Automatically calculate a delta (time from start) for each log
 - All Errors are logged (appended) to the same file
 
-It will **NOT** exit the application at any point, unless the log cannot be created.
+It will **NOT** exit the application at any point, unless the log cannot be created-<br>
+or if you specificy `error(..., exit=True)`
 > [!NOTE]
 > New log files are only created when the program / module is initalized.
 
