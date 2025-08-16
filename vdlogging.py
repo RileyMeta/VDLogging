@@ -93,12 +93,3 @@ class Logging:
         except Exception as e:
             print(f"Catastrophic Error during logging: {e}")
             exit(255)  # Catastrophic Error
-
-# Usage examples for help():
-# help(Logging)           - Shows class docstring and overview
-# help(Logging.__init__)  - Shows constructor help
-# help(Logging.log_event) - Shows log_event method help
-#
-# Quick start:
-# L = Logging("prog_name")
-# L.log_event(404, "File not found")
