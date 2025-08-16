@@ -66,13 +66,13 @@ class Logging:
         timestamp = datetime.now() - self.progstart
         return str(timestamp).split('.')[0]
 
-    def log_event(self, errno: int, prompt: str):
+    def log_event(self, errno: int, desc: str):
         """
         Log an error event with timestamp and error number.
 
         Args:
-            errno (int): Error number/code for categorization
-            prompt (str): Description of the error that occurred
+            errno  (int): Error number/code for categorization
+            desc   (str): Description of the error that occurred
 
         Example:
             >>> L = Logging("myapp")
@@ -83,13 +83,31 @@ class Logging:
 
         Note:
             Logs are appended to file in format:
-            "[ERROR {errno} @ {timestamp}]: {prompt}"
+            "[ERROR {errno} @ {timestamp}]: {desc}"
         """
         timestamp = self._get_delta()
 
         try:
             with open(self.log_path, 'a') as f:
-                f.write(f"[ERROR {errno} @ {timestamp}]: {prompt}\n")
+                f.write(f"[ERROR {errno} @ {timestamp}]: {desc}\n")
         except Exception as e:
             print(f"Catastrophic Error during logging: {e}")
             exit(255)  # Catastrophic Error
+
+    def error(self, desc: str, errno: int = 1, exit: bool = False):
+        """
+        A simple console error with automatic logging.
+
+        Args:
+            errno  (int) : Error number/code for categorization
+            desc   (str) : Description of the error that occurred
+            exit   (bool): If the program should exit completely
+
+        Note:
+            All Errors are Events, but not all Events are Errors.
+            We all you to use both individually for this exact reason.
+        """
+        print(f"ERROR {errno}: {desc}")
+        self.log_event(errno, desc)
+        if exit:
+            sys.exit(errno)
