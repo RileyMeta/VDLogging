@@ -36,7 +36,9 @@ L = Logging("my_program", "/var/logs/")
 ```sh
 $ cat /tmp/my_program_1.log
 ...
+[LOG 1 @ 00:00:01]: File Lookup
 [ERROR 404 @ 00:00:02]: File not Found
+[LOG 2 @ 00:00:11]: Connect to database
 [ERROR 500 @ 00:00:12]: Databse connection failed
 ...
 ```
