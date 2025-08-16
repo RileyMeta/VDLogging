@@ -21,6 +21,8 @@ import vdlogging
 
 L = Logging("my_program")
 L.log_event(error_number, descriptions)
+# or
+L.error(errno, prompt, exit=True)
 ```
 The name passed in the Class declaration is what the logs will be named, along with a version number.<br>
 Optionally you can pass a specific location, instead of using the default `/tmp/`
