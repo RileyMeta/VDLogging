@@ -1,3 +1,23 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+A module for logging 
+
+This module contains functions for creating and updating log files
+"""
+
+# Mozilla Public License 2.0 (MPL2)
+#
+# Copyright (c) 2025 Riley Ava
+#
+# The full licenese can be found at <https://www.mozilla.org/en-US/MPL/2.0/>
+
+__author__ = "Riley Ava"
+__version__ = "1.0.0"
+__license__ = "MPL"
+__email__ = "rileymeta@gmail.com"
+
 import os
 import time
 from sys import exit
