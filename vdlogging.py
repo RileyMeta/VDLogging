@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -19,7 +18,6 @@ __license__ = "MPL"
 __email__ = "rileymeta@gmail.com"
 
 import os
-import time
 from sys import exit
 from datetime import datetime
 
