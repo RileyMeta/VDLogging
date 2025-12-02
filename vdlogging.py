@@ -125,7 +125,7 @@ class Logging:
 
         Note:
             All Errors are Events, but not all Events are Errors.
-            We all you to use both individually for this exact reason.
+            We allow you to use both individually for this exact reason.
         """
         print(f"ERROR {errnum}: {desc}")
         self.log_event(errnum, desc, error=True)
